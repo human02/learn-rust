@@ -12,6 +12,8 @@ fn main() {
     let a2 = 2.3;
     let a3: f32 = 120.0;
 
-    let avg = (a1 as f32 + a2 + a3) / 3 as f32; // Type casting using "as". arithmetic operations cant be done on different datatype variables.
+    let avg = (a1 as f64 + a2 + a3 as f64) / 3.0; // Type casting using "as". arithmetic operations cant be done on different datatype variables even f32 and f64 is different.
     println!("average of a1,a2,a3 = {}", avg);
+    assert_eq!(avg, 45.1);
+    println!("\n Correct avg generated");
 }
